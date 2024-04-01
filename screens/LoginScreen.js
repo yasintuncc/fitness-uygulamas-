@@ -39,7 +39,7 @@ export default function LoginScreen() {
       <TouchableOpacity
         activeOpacity={0.8}
         style={styles.button}
-        onPress={() => navigation.navigate("giris")}
+        onPress={() => navigation.navigate("kayit")}
       >
         <Text style={styles.buttonText}>kayıt ol</Text>
       </TouchableOpacity>
