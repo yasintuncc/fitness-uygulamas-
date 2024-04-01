@@ -1,34 +1,64 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { auth } from "../firebase";
+import React, { useCallback, useEffect, useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
-export default function RegisterScreen() {
+
+export default function RegisterScreen({ navigation }) {
+
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        navigation.navigate("anasayfa");
+      }
+    });
+  }, []);
+
+  const handleSignUp = () => {
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        console.log("Kullanıcı kayıt oldu", user.email);
+      })
+      .catch((error) => alert(error.message));
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Kayıt Olma Ekranı</Text>
-      
+
       <TextInput
         style={styles.input}
         autoCorrect={false}
         placeholder="Kullanıcı Adı"
         placeholderTextColor={"black"}
         onChangeText={(text) => setEmail(text)}
-        keyboardType="email-address"
-        autoCapitalize="none"
       />
       <TextInput
         style={styles.input}
         autoCorrect={false}
-        placeholder="Şifre"
+        placeholder="Soyisim"
         placeholderTextColor={"black"}
-        secureTextEntry
-        autoCapitalize="none"
         onChangeText={(text) => setPassword(text)}
       />
-      
+
       <TextInput
         style={styles.input}
         autoCorrect={false}
-        placeholder="Kullanıcı Adı"
+        placeholder="E-Mail"
         placeholderTextColor={"black"}
         onChangeText={(text) => setEmail(text)}
         keyboardType="email-address"
@@ -46,17 +76,15 @@ export default function RegisterScreen() {
       <TouchableOpacity
         activeOpacity={0.8}
         style={styles.button}
-        onPress={() => navigation.navigate("kayit")}
+        onPress={handleSignUp}
       >
         <Text style={styles.buttonText}>Kayıt Ol</Text>
       </TouchableOpacity>
-
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
-
   button: {
     backgroundColor: "darkblue",
     padding: 20,
@@ -88,4 +116,4 @@ const styles = StyleSheet.create({
     marginTop: 20,
     backgroundColor: "rgba(0,0,255,0.2)",
   },
-})
+});
