@@ -1,9 +1,20 @@
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { auth } from "../firebase";
 
 export default function LoginScreen() {
   const navigation = useNavigation();
+
+  
+
+
+
+
+
+
+
+
 
   return (
     <View style={styles.container}>
@@ -27,11 +38,15 @@ export default function LoginScreen() {
         autoCapitalize="none"
         onChangeText={(text) => setPassword(text)}
       />
+      <TouchableOpacity
+      onPress={()=>navigation.navigate("sifremiUnuttum")}>
+        <Text>Şifremi Unuttum</Text>
+      </TouchableOpacity>
 
       <TouchableOpacity
         activeOpacity={0.8}
+        onPress={handleLogin}
         style={styles.button}
-        onPress={() => navigation.navigate("kayit")}
       >
         <Text style={styles.buttonText}>Giriş</Text>
       </TouchableOpacity>
