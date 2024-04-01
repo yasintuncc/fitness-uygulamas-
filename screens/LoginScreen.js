@@ -7,10 +7,26 @@ export default function LoginScreen() {
   const navigation = useNavigation();
 
   
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        navigation.navigate("anasayfa");
+      }
+    });
+  }, []);
 
-
-
+  const handleLogin = () => {
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        console.log("Kullanıcı giriş yaptı", user.email);
+      })
+      .catch((error) => alert(error.message));
+  };
 
 
 
@@ -38,6 +54,8 @@ export default function LoginScreen() {
         autoCapitalize="none"
         onChangeText={(text) => setPassword(text)}
       />
+
+      
       <TouchableOpacity
       onPress={()=>navigation.navigate("sifremiUnuttum")}>
         <Text>Şifremi Unuttum</Text>
