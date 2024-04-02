@@ -13,10 +13,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <StatusBar
-        backgroundColor="red"
-        barStyle={Platform.OS === "ios" ? "dark-content" : "dark-content"}
         hidden={false}
-        translucent={false}
+        translucent={true}
       />
 
       <Stack.Navigator>
