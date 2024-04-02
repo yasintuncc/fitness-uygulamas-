@@ -2,87 +2,87 @@ const Data = [
   {
     id: "1",
     title: "Kardiyo",
-    subtitle: "Subtitle 1",
-    page:"kardiyo"
+    subtitle: "Kardiyo açıklaması",
+    page:"kardiyo",
+    img:"",
   },
   {
     id: "2",
-    title: "Title 2",
-    subtitle: "Subtitle 2",
-    page:"bacak"
+    title: "Bacak",
+    subtitle: "Bacak Açıklama",
+    img:"",
+    page:"bacak",
   },
   {
     id: "3",
-    title: "Title 3",
-    subtitle: "Subtitle 3",
+    title: "Sırt",
+    subtitle: "Sırt Açıklama",
+    img:"",
     page:"sırt"
 
   },
   {
     id: "4",
-    title: "safasf",
-    subtitle: "Subtitle 4",
-    page:"kardiyo"
+    title: "Ön Kol",
+    subtitle: "Ön Kol Açıklama",
+    img:"",
+    page:"önkol"
   },
   {
     id: "5",
-    title: "Title 5",
-    subtitle: "Subtitle 4",
-    page:"kardiyo"
+    title: "Arka Kol",
+    subtitle: "Arka Kol Açıklama",
+    img:"",
+    page:"arkakol"
   },
   {
     id: "6",
-    title: "Title 5",
-    subtitle: "Subtitle 5",
-    page:"kardiyo"
+    title: "Gögüs",
+    subtitle: "Göğüs Açıklama",
+    img:"",
+    page:"göğüs"
   },
   {
     id: "7",
-    title: "Title 5",
-    subtitle: "Subtitle 6",
-    page:"kardiyo"
+    title: "Sırt",
+    subtitle: "Sırt Açıklama",
+    img:"",
+    page:"sırt"
   },
   {
     id: "8",
-    title: "Title 5",
-    subtitle: "Subtitle 3",
-    page:"kardiyo"
+    title: "Karın",
+    subtitle: "Karın Açıklama",
+    img:"",
+    page:"karın"
   },
   {
     id: "9",
-    title: "Title 5",
-    subtitle: "Subtitle 3",
-    page:"kardiyo"
+    title: "Deadlift",
+    subtitle: "Deadlift açıklama",
+    img:"",
+    page:""
   },
   {
     id: "10",
-    title: "Title 5",
-    subtitle: "Subtitle 3",
-    page:"kardiyo"
+    title: "Plank",
+    subtitle: "Plank Açıklama",
+    img:"",
+    page:""
   },
   {
     id: "11",
-    title: "Title 5",
-    subtitle: "Subtitle 3",
-    page:"kardiyo"
+    title: "Kalça",
+    subtitle: "Kalça Açıklama",
+    img:"",
+    page:""
   },
   {
     id: "12",
-    title: "Title 5",
-    subtitle: "Subtitle 3",
-    page:"kardiyo"
-  },
-  {
-    id: "13",
-    title: "Title 5",
-    subtitle: "Subtitle 3",
-    page:"kardiyo"
-  },
-  {
-    id: "14",
-    title: "Title 5",
-    subtitle: "Subtitle 3",
-    page:"kardiyo"
+    title: "Barfiks",
+    subtitle: "Barfiks Açıklama",
+    img:"",
+    page:""
   },
 ];
 

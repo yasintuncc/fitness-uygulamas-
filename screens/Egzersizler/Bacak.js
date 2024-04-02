@@ -1,14 +1,14 @@
-import { Image, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { Image, StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
-export default function Kardiyo() {
+export default function Bacak() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Kardiyo</Text>
-      <Text style={styles.aciklama}>Kardiyo başlığının açıklaması</Text>
+      <Text style={styles.title}>Bacak</Text>
+      <Text style={styles.aciklama}>Bacak başlığının açıklaması</Text>
       <Image source={require('../../assets/deneme.gif')} style={styles.backgroundImage} />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
     width:"100%",
     height:"100%"
   }
-});
+})

@@ -7,15 +7,14 @@ import HomeScreen from "./screens/HomeScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import GirisSayfasi from "./screens/GirisSayfasi";
 import ForgotPassword from "./screens/ForgotPassword";
+import Kardiyo from "./screens/Egzersizler/Kardiyo";
+import Bacak from "./screens/Egzersizler/Bacak";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <StatusBar
-        hidden={false}
-        translucent={true}
-      />
+      <StatusBar hidden={false} translucent={true} />
 
       <Stack.Navigator>
         <Stack.Screen
@@ -47,6 +46,19 @@ export default function App() {
           options={{ headerShown: false }}
           component={ForgotPassword}
         />
+
+        <Stack.Screen
+          name="kardiyo"
+          options={{ headerShown: false }}
+          component={Kardiyo}
+        />
+
+        <Stack.Screen
+          name="bacak"
+          options={{ headerShown: false }}
+          component={Bacak}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
