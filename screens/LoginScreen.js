@@ -1,10 +1,17 @@
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { auth } from "../firebase";
 
 export default function LoginScreen() {
   const navigation = useNavigation();
+
+  useEffect(() => {
+    StatusBar.setBackgroundColor("#fff");
+    StatusBar.setBarStyle("dark-content");
+  }, []);
+
+
 
   
   const [email, setEmail] = useState("");
@@ -83,17 +90,16 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   button: {
     backgroundColor: "darkblue",
-    padding: 20,
-    borderRadius: 19,
-    width: 210,
-    borderRadius: 50,
+    padding: 10,
+    width: 190,
+    borderRadius: 30,
     marginTop: "10%",
     justifyContent: "space-between",
   },
   buttonText: {
     color: "white",
     margin: "auto",
-    fontSize: 16,
+    fontSize: 18,
     textAlign: "center",
     fontFamily: "Roboto",
   },
@@ -103,7 +109,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
-    fontSize: 34,
+    fontSize: 40,
+    fontFamily:"monospace",
   },
   input: {
     padding: 15,

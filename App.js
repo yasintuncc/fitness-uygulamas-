@@ -9,6 +9,12 @@ import GirisSayfasi from "./screens/GirisSayfasi";
 import ForgotPassword from "./screens/ForgotPassword";
 import Kardiyo from "./screens/Egzersizler/Kardiyo";
 import Bacak from "./screens/Egzersizler/Bacak";
+import Sırt from "./screens/Egzersizler/Sırt";
+import Onkol from "./screens/Egzersizler/Onkol";
+import Arkakol from "./screens/Egzersizler/Arkakol";
+
+
+
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -58,6 +64,26 @@ export default function App() {
           options={{ headerShown: false }}
           component={Bacak}
         />
+
+        <Stack.Screen
+          name="sırt"
+          options={{ headerShown: false }}
+          component={Sırt}
+        />
+
+        <Stack.Screen
+          name="önkol"
+          options={{ headerShown: false }}
+          component={Onkol}
+        />
+
+        <Stack.Screen
+          name="arkakol"
+          options={{ headerShown: false }}
+          component={Arkakol}
+        />
+
+        
 
       </Stack.Navigator>
     </NavigationContainer>

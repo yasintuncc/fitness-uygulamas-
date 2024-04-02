@@ -40,22 +40,23 @@ const Data = [
     title: "Gögüs",
     subtitle: "Göğüs Açıklama",
     img:"",
-    page:"göğüs"
+    page:""
   },
   {
     id: "7",
-    title: "Sırt",
-    subtitle: "Sırt Açıklama",
-    img:"",
-    page:"sırt"
-  },
-  {
-    id: "8",
     title: "Karın",
     subtitle: "Karın Açıklama",
     img:"",
-    page:"karın"
+    page:""
   },
+  {
+    id: "8",
+    title: "Omuz",
+    subtitle: "Omuz Açıklama",
+    img:"",
+    page:""
+  },
+  
   {
     id: "9",
     title: "Deadlift",
