@@ -1,7 +1,8 @@
 import { Image, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { auth } from "../firebase";
+import { useFonts } from "expo-font";
 
 export default function LoginScreen() {
   const navigation = useNavigation();
@@ -11,6 +12,25 @@ export default function LoginScreen() {
     StatusBar.setBarStyle("dark-content");
   }, []);
 
+
+  const [fontsLoaded, fontError] = useFonts({
+    font1: require("../assets/fonts/RobotoSlab-Light.ttf"),
+    font2: require("../assets/fonts/PlayfairDisplay-Black.ttf"),
+    font3: require("../assets/fonts/PlayfairDisplay-Regular.ttf"),
+    font4: require("../assets/fonts/PlayfairDisplay-Medium.ttf"),
+    font5: require("../assets/fonts/RobotoSlab-Medium.ttf"),
+    font6: require("../assets/fonts/RobotoSlab-Regular.ttf"),
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded || fontError) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded, fontError]);
+
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
 
 
   
@@ -70,7 +90,8 @@ export default function LoginScreen() {
 
       <TouchableOpacity
         activeOpacity={0.8}
-        onPress={handleLogin}
+        // onPress={handleLogin} // Daha sonra açılacak
+        onPress={()=>navigation.navigate("anasayfa")}
         style={styles.button}
       >
         <Text style={styles.buttonText}>Giriş</Text>
@@ -110,7 +131,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 40,
-    fontFamily:"monospace",
+    fontFamily:"font4",
   },
   input: {
     padding: 15,

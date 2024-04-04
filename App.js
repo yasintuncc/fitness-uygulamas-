@@ -12,9 +12,7 @@ import Bacak from "./screens/Egzersizler/Bacak";
 import Sırt from "./screens/Egzersizler/Sırt";
 import Onkol from "./screens/Egzersizler/Onkol";
 import Arkakol from "./screens/Egzersizler/Arkakol";
-
-
-
+import Gogus from "./screens/Egzersizler/Gogus";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -83,8 +81,11 @@ export default function App() {
           component={Arkakol}
         />
 
-        
-
+        <Stack.Screen
+          name="gogus"
+          options={{ headerShown: false }}
+          component={Gogus}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
