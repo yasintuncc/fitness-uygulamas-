@@ -14,12 +14,7 @@ export default function LoginScreen() {
 
 
   const [fontsLoaded, fontError] = useFonts({
-    font1: require("../assets/fonts/RobotoSlab-Light.ttf"),
-    font2: require("../assets/fonts/PlayfairDisplay-Black.ttf"),
-    font3: require("../assets/fonts/PlayfairDisplay-Regular.ttf"),
     font4: require("../assets/fonts/PlayfairDisplay-Medium.ttf"),
-    font5: require("../assets/fonts/RobotoSlab-Medium.ttf"),
-    font6: require("../assets/fonts/RobotoSlab-Regular.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {

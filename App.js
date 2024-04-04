@@ -6,7 +6,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./screens/HomeScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import GirisSayfasi from "./screens/GirisSayfasi";
-import ForgotPassword from "./screens/ForgotPassword";
 import Kardiyo from "./screens/Egzersizler/Kardiyo";
 import Bacak from "./screens/Egzersizler/Bacak";
 import Sırt from "./screens/Egzersizler/Sırt";
@@ -14,6 +13,8 @@ import Onkol from "./screens/Egzersizler/Onkol";
 import Arkakol from "./screens/Egzersizler/Arkakol";
 import Gogus from "./screens/Egzersizler/Gogus";
 import Aletler from "./screens/Aletler";
+import ForgotPassword from "./screens/ForgotPassword";
+import Dambil from "./screens/Aletler/Dambil";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -87,12 +88,19 @@ export default function App() {
           options={{ headerShown: false }}
           component={Gogus}
         />
-        
+
         <Stack.Screen
           name="aletler"
           options={{ headerShown: false }}
           component={Aletler}
         />
+
+        <Stack.Screen
+          name="dambil"
+          options={{ headerShown: false }}
+          component={Dambil}
+        />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
