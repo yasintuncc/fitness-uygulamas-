@@ -12,6 +12,7 @@ import { Card, ListItem, Button, Icon } from "react-native-elements";
 import Data from "../data/card_data";
 import { useNavigation } from "@react-navigation/native";
 import { useFonts } from "expo-font";
+import Bar from "../components/Bar";
 
 export default function HomeScreen() {
   //Fontları yükleme
@@ -60,6 +61,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
+      <Bar />
       <FlatList
         key={columns} // numColumns değiştiğinde FlatList'i yeniden oluşturmak için key'i değiştir
         data={Data}
