@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   FlatList,
@@ -8,36 +8,33 @@ import {
   StatusBar,
   Image,
 } from "react-native";
-import { Card, ListItem, Button, Icon } from "react-native-elements";
-import Data from "../data/card_data";
 import { useNavigation } from "@react-navigation/native";
-import { useFonts } from "expo-font";
+// import Font from "expo-font";
 import Bar from "../components/Bar";
+import Data from "../data/card_data";
 
 export default function HomeScreen() {
-  //Fontları yükleme
-
-  const [fontsLoaded, fontError] = useFonts({
-    font1: require("../assets/fonts/RobotoSlab-Light.ttf"),
-  });
-
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded || fontError) {
-      await SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded, fontError]);
-
-  if (!fontsLoaded && !fontError) {
-    return null;
-  }
-
-  const [columns, setColumns] = useState(2);
-  const navigation = useNavigation();
+  // const [fontsLoaded, setFontsLoaded] = useState(false);
 
   useEffect(() => {
+    // loadFonts();
     StatusBar.setBackgroundColor("#67bf49");
     StatusBar.setBarStyle("light-content");
   }, []);
+
+  // const loadFonts = async () => {
+  //   await Font.loadAsync({
+  //     font1: require("../assets/fonts/RobotoSlab-Light.ttf"),
+  //   });
+  //   setFontsLoaded(true);
+  // };
+
+  // if (!fontsLoaded) {
+  //   return null;
+  // }
+
+  const [columns, setColumns] = useState(2);
+  const navigation = useNavigation();
 
   const renderItem = ({ item }) => (
     <TouchableOpacity
@@ -63,7 +60,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <Bar />
       <FlatList
-        key={columns} // numColumns değiştiğinde FlatList'i yeniden oluşturmak için key'i değiştir
+        key={columns}
         data={Data}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
@@ -85,7 +82,7 @@ const styles = StyleSheet.create({
   item: {
     backgroundColor: "#fff",
     marginVertical: 8,
-    marginHorizontal: 8, // Yatay boşluk
+    marginHorizontal: 8,
     borderRadius: 10,
     width: 170,
     height: 170,
@@ -110,7 +107,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     width: "100%",
     alignItems: "center",
-    fontFamily:"font1"
+    // fontFamily: "font1",
   },
   name: {
     color: "white",

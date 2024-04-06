@@ -3,13 +3,14 @@ import "firebase/compat/auth";
 
 
 const firebaseConfig = {
-  apiKey: "your api key",
-  authDomain: "your domain",
-  projectId: "your id",
-  storageBucket: "your bucket",
-  messagingSenderId: "your sender id",
-  appId: "your app id",
+  apiKey: "AIzaSyCU0e49tJFIHbOSN-Pi7CJiDPRXZHgBcmA",
+  authDomain: "fitnessuygulamasi-c5133.firebaseapp.com",
+  projectId: "fitnessuygulamasi-c5133",
+  storageBucket: "fitnessuygulamasi-c5133.appspot.com",
+  messagingSenderId: "730631215774",
+  appId: "1:730631215774:web:93fe6d5b67ca2195a9b98f"
 };
+
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);

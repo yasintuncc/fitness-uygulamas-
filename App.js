@@ -15,6 +15,12 @@ import Gogus from "./screens/Egzersizler/Gogus";
 import Aletler from "./screens/Aletler";
 import ForgotPassword from "./screens/ForgotPassword";
 import Dambil from "./screens/Aletler/Dambil";
+import Karın from "./screens/Egzersizler/Karın";
+import omuz from "./screens/Egzersizler/Omuz";
+import Deadlift from "./screens/Egzersizler/Deadlift";
+import Plank from "./screens/Egzersizler/Plank";
+import Kalça from "./screens/Egzersizler/Kalça";
+import Barfiks from "./screens/Egzersizler/Barfiks";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -88,6 +94,43 @@ export default function App() {
           options={{ headerShown: false }}
           component={Gogus}
         />
+
+        <Stack.Screen
+          name="Karın"
+          options={{ headerShown: false }}
+          component={Karın}
+        />
+
+        <Stack.Screen
+          name="omuz"
+          options={{ headerShown: false }}
+          component={omuz}
+        />
+        
+        <Stack.Screen
+          name="Deadlift"
+          options={{ headerShown: false }}
+          component={Deadlift}
+        />
+        
+        <Stack.Screen
+          name="Plank"
+          options={{ headerShown: false }}
+          component={Plank}
+        />
+        <Stack.Screen
+          name="kalça"
+          options={{ headerShown: false }}
+          component={Kalça}
+        />
+        <Stack.Screen
+          name="Barfiks"
+          options={{ headerShown: false }}
+          component={Barfiks}
+        />
+        
+
+        
 
         <Stack.Screen
           name="aletler"

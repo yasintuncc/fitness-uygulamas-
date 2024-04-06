@@ -4,11 +4,12 @@ import React from 'react'
 export default function Gogus() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>BACAK</Text>
-      <Text style={styles.aciklama}>bacak kaslarını güçlendirmek ve dengeyi artırmak için etkili bir egzersizdir. Başlamak için ayakta durun ve vücudunuzu dik tutun. Ellerinizi belinizin yanında veya önünde birleştirin. Bir bacağınızı öne doğru adım atın ve diğer bacağınızın dizini hafifçe bükün. Ön bacağınızın dizinin ayak bileğinizle hizalandığından emin olun ve baldırınızı yere paralel olacak şekilde bükün. Ardından, öne doğru adım attığınız bacağınızı geri çekerek başlangıç pozisyonuna dönün. Diğer bacağınızla aynı hareketi tekrarlayın. Bu egzersiz, bacaklarınızın ön ve arka kısımlarını güçlendirirken aynı zamanda kalça ve çekirdek kaslarını da çalıştırır. </Text>
-      <Image source={require('../../assets/deneme.gif')} style={styles.backgroundImage} />
-      <Image source={require('../../assets/bacak.gif')} style={styles.backgroundImage} />
-      
+      <Text style={styles.title}>GÖĞÜS HAREKETİ </Text>
+      <Text style={styles.aciklama}>Machine Fly, göğüs kaslarını hedefleyen ve geliştiren bir direnç egzersizidir ve genellikle bir makine kullanılarak yapılır. Başlangıç pozisyonunda, makinenin kolları göğsünüzün yanlarında veya önünde olacak şekilde ayarlanır. Kolları tutarak, vücudunuzu sabit tutun ve sırtınızı makineye iyice yaslayın. Ellerinizin rahat olması ve kollarınızın yüksekliğinin göğsünüzle aynı seviyede olduğundan emin olun. Ellerinizi kavrayarak nefes alın ve göğsünüzü açarak, kolları yavaşça ve kontrolle bir araya getirin. Ellerinizi birbirine yaklaştırırken göğsünüzü sıkın ve kasları hissedin. Üst noktaya ulaştığınızda, kasları bir saniye kadar sıkın ve nefes vererek başlangıç pozisyonuna geri dönün. </Text>
+
+      <Text style={styles.title}> YAPILIŞI </Text>
+
+      <Image source={require('../../assets/gögüsgif.gif')} style={styles.backgroundImage} />
     </View>
   )
 }
@@ -26,12 +27,12 @@ const styles = StyleSheet.create({
       },
       aciklama: {
         alignSelf: "flex-start",
-        margin:25,
-        fontSize: 16,
+        margin:28,
+        fontSize: 18,
         fontFamily:"cursive",
       },
       backgroundImage:{
-        width:250,
-        height:265,
+        width:380,
+        height:350,
       }
 })

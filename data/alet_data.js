@@ -1,7 +1,7 @@
 const Alet_Data = [
     {
         id: "1",
-        title: "Dambıl",
+        title: "Koşu Bandı",
         subtitle: "Kardiyo açıklaması",
         page: "dambil",
         img: require("../assets/kardiyoSpor.jpg"),

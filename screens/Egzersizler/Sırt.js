@@ -4,7 +4,7 @@ import React from "react";
 export default function Sırt() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>SIRT</Text>
+      <Text style={styles.title}>SIRT HAREKETİ</Text>
       <Text style={styles.aciklama}>Hücreler, ihtiyaçları olan oksijeni ve besin maddelerini, dolaşım sistemi içinde bulunan kandan sağlamaktadır. Aynı zamanda da metabolizmaları sonucu ortaya çıkan karbondioksidi ve atık maddelerini atılım organlarına yönlendirmesi için kana vermektedirler. Kanın, tüm bu görevleri yerine getirmesini sağlayan sisteme ise dolaşım sistemi (kardiyovasküler sistem) denir. Kardiyo egzersizleri, kardiyovasküler sistemin güçlendirilmesine yardımcı olabilecek çeşitli egzersizleri ifade etmektedir. Bisiklet, ip atlama, yüzme ve koşu kardiyo egzersizleri arasında yer alır. Bu tür egzersizler, nefes alıp verme sıklığının artmasına yol açmaktadır. Bu da kişinin kalp atışında hızlanmaya ve buna bağlı olarak da hücrelerin daha fazla yağ yakmasını sağlamaktadır.</Text>
       <Image source={require('../../assets/sırt.webp')} style={styles.backgroundImage} />
       <Image source={require('../../assets/sırt2.webp')} style={styles.backgroundImage2} />

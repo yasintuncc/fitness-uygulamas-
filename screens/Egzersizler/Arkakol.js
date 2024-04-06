@@ -6,8 +6,9 @@ export default function arkakol() {
     <View style={styles.container}>
       <Text style={styles.title}>ARKA KOL</Text>
       <Text style={styles.aciklama}>Arka kol kaslarını güçlendirmek için etkili bir egzersiz olan triceps dip, vücut ağırlığınızı kullanarak triceps kaslarınızı çalıştırır. Bu egzersizi yapmak için, bir sandalye veya dip bar gibi bir yükseltiye ihtiyacınız olacak. Başlangıç pozisyonunda, dip barın kenarlarına ellerinizi yerleştirin ve vücudunuzu kollarınızı kıvırarak yere doğru indirin. Dirsekleriniz 90 derece açı oluşturana kadar indirin, ardından kollarınızı uzatarak başlangıç pozisyonuna geri dönün. Dikkat etmeniz gereken en önemli nokta, dirseklerinizi dışa doğru açmamak ve hareketi yavaş ve kontrollü bir şekilde yapmaktır. Triceps dip, arka koldaki triceps kaslarını güçlendirirken aynı zamanda omuz ve göğüs kaslarını da destekler. Bu egzersizi düzenli olarak yaparak, arka kol kaslarınızı güçlendirebilir ve tonlayabilirsiniz.</Text>
-      <Image source={require('../../assets/arkakol.gif')} style={styles.backgroundImage} />
-      <Image source={require('../../assets/arkakol2.webp')} style={styles.backgroundImage} />
+      <Text style={styles.title}>YAPILIŞI</Text>
+      <Image source={require('../../assets/arkakol.gif')} style={[styles.backgroundImage,{width:180,height:190,marginBottom:10}]} />
+      <Image source={require('../../assets/arkakol2.webp')} style={[styles.backgroundImage,{width:"100%"}]} />
 
     </View>
   );
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 35,
     fontFamily:"serif",
+    marginBottom:10,
     
   },
   aciklama: {

@@ -13,7 +13,7 @@ export default function LoginScreen() {
   }, []);
 
 
-  const [fontsLoaded, fontError] = useFonts({
+  const [fontsLoaded, fontError] = useState({
     font4: require("../assets/fonts/PlayfairDisplay-Medium.ttf"),
   });
 
