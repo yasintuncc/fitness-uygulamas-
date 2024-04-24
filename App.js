@@ -129,9 +129,6 @@ export default function App() {
           component={Barfiks}
         />
         
-
-        
-
         <Stack.Screen
           name="aletler"
           options={{ headerShown: false }}

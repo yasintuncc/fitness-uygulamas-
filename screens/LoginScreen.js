@@ -1,4 +1,4 @@
-import { Image, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, ImageBackground, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import React, { useCallback, useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { auth } from "../firebase";
@@ -50,19 +50,23 @@ export default function LoginScreen() {
       .catch((error) => alert(error.message));
   };
 
-
-
-
-
   return (
+
+    
     <View style={styles.container}>
+      <ImageBackground
+      source={require('../assets/g.jpg')}
+      style={styles.backgroundImage}
+      resizeMode="stretch"
+    />
       <Text style={styles.title}>Hoşgeldiniz</Text>
 
+      
       <TextInput
         style={styles.input}
         autoCorrect={false}
         placeholder="Kullanıcı Adı"
-        placeholderTextColor={"black"}
+        placeholderTextColor={"white"}
         onChangeText={(text) => setEmail(text)}
         keyboardType="email-address"
         autoCapitalize="none"
@@ -71,7 +75,7 @@ export default function LoginScreen() {
         style={styles.input}
         autoCorrect={false}
         placeholder="Şifre"
-        placeholderTextColor={"black"}
+        placeholderTextColor={"white"}
         secureTextEntry
         autoCapitalize="none"
         onChangeText={(text) => setPassword(text)}
@@ -80,13 +84,12 @@ export default function LoginScreen() {
       
       <TouchableOpacity
       onPress={()=>navigation.navigate("sifremiUnuttum")}>
-        <Text>Şifremi Unuttum</Text>
+        < Text style={styles.forgotPasswordText}>Şifremi Unuttum</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        activeOpacity={0.8}
-        // onPress={handleLogin} // Daha sonra açılacak
-        onPress={()=>navigation.navigate("anasayfa")}
+        activeOpacity={0.9}
+        onPress={handleLogin} // Daha sonra açılacak
         style={styles.button}
       >
         <Text style={styles.buttonText}>Giriş</Text>
@@ -105,19 +108,22 @@ export default function LoginScreen() {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "darkblue",
+    backgroundColor: "rgba(0,50,500,0.3)",
     padding: 10,
     width: 190,
     borderRadius: 30,
-    marginTop: "10%",
+    marginTop: "5%",
     justifyContent: "space-between",
   },
   buttonText: {
     color: "white",
     margin: "auto",
-    fontSize: 18,
+    fontSize: 20,
     textAlign: "center",
     fontFamily: "Roboto",
+  },
+  forgotPasswordText: {
+    color:"red",
   },
   container: {
     flex: 1,
@@ -127,12 +133,23 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     fontFamily:"font4",
+    color:"white",
+    fontFamily:"Roboto",
   },
   input: {
     padding: 15,
     borderRadius: 10,
     width: 300,
     marginTop: 20,
-    backgroundColor: "rgba(0,0,255,0.2)",
+    backgroundColor: "rgba(0,0,100,0.3)",
+    color:"white",
   },
+  
+  backgroundImage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    justifyContent:"space-between",
+    position:"absolute",
+  }
 });

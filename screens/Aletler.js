@@ -62,19 +62,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 22,
-    backgroundColor: "#67bf41",
+    backgroundColor: "#fffaf0",
     alignItems: "center",
     justifyContent: "center",
     marginTop: 20,
   },
   item: {
     backgroundColor: "#fff",
-    marginVertical: 8,
-    marginHorizontal: 8, // Yatay boşluk
+    marginVertical: 10,
+    marginHorizontal: 10, // Yatay boşluk
     borderRadius: 10,
     width: 170,
-    height: 170,
-    elevation: 10,
+    height: 175,
+    elevation: 20,
     overflow: "hidden",
   },
   subtitleArea: {
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
     flexDirection: "row",
     alignItems: "center",
   },
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   name: {
     color: "white",
-    fontSize: 16,
+    fontSize: 17,
     padding: 10,
     textAlign: "center",
   },

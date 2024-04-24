@@ -18,8 +18,8 @@ export default function HomeScreen() {
 
   useEffect(() => {
     // loadFonts();
-    StatusBar.setBackgroundColor("#67bf49");
-    StatusBar.setBarStyle("light-content");
+    StatusBar.setBackgroundColor("#fff");
+    StatusBar.setBarStyle("dark-content");
   }, []);
 
   // const loadFonts = async () => {
@@ -73,8 +73,8 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 22,
-    backgroundColor: "#67bf41",
+    paddingTop:10,
+    backgroundColor: "transparent",
     alignItems: "center",
     justifyContent: "center",
     marginTop: 20,

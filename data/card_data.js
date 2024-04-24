@@ -4,7 +4,7 @@ const Data = [
     title: "KARDİYO",
     subtitle: "Kardiyo açıklaması",
     page: "kardiyo",
-    img: require("../assets/kardiyo.jpg"),
+    img: require("../assets/kardiyoo.jpg"),
   },
   {
     id: "2",
@@ -79,7 +79,7 @@ const Data = [
   },
   {
     id: "12",
-    title: "BARFİKS",
+    title: "Barfiks",
     subtitle: "Barfiks Açıklama",
     img: require("../assets/barfiks.jpg"),
     page: "Barfiks",

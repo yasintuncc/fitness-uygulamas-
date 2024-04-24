@@ -4,6 +4,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  ImageBackground,
 } from "react-native";
 import { auth } from "../firebase";
 import React, { useCallback, useEffect, useState } from "react";
@@ -40,6 +41,7 @@ export default function RegisterScreen({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.title}>Kayıt Olma Ekranı</Text>
 
+     
       <TextInput
         style={styles.input}
         autoCorrect={false}
@@ -116,4 +118,5 @@ const styles = StyleSheet.create({
     marginTop: 20,
     backgroundColor: "rgba(0,0,255,0.2)",
   },
+  
 });
