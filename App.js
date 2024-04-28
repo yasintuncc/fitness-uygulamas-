@@ -21,6 +21,18 @@ import Deadlift from "./screens/Egzersizler/Deadlift";
 import Plank from "./screens/Egzersizler/Plank";
 import Kalça from "./screens/Egzersizler/Kalça";
 import Barfiks from "./screens/Egzersizler/Barfiks";
+import Fitnesseldiveni from "./screens/Aletler/Fitnesseldiveni";
+import Fitnessipi from "./screens/Aletler/Fitnessipi";
+import Bisiklet from "./screens/Aletler/Bisiklet";
+import Pilatestopu from "./screens/Aletler/Pilatestopu";
+import Fitnessbarı from "./screens/Aletler/Fitnessbarı";
+import Girya from "./screens/Aletler/Girya";
+import Steptahtası from "./screens/Aletler/Steptahtası";
+import Mekikaleti from "./screens/Aletler/Mekikaleti";
+import Fitnessplakaları from "./screens/Aletler/Fitnessplakaları";
+import Fitnesssehpası from "./screens/Aletler/Fitnesssehpası";
+import Koşubandı from "./screens/Aletler/Koşubandı";
+
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -140,6 +152,68 @@ export default function App() {
           options={{ headerShown: false }}
           component={Dambil}
         />
+        <Stack.Screen
+          name="deadlift"
+          options={{ headerShown: false }}
+          component={Deadlift}
+        />
+
+        <Stack.Screen
+          name="Fitnesseldiveni"
+          options={{ headerShown: false }}
+          component={Fitnesseldiveni}
+        />
+        <Stack.Screen
+          name="Fitnessipi"
+          options={{ headerShown: false }}
+          component={Fitnessipi}
+        />
+        <Stack.Screen
+          name="Bisiklet"
+          options={{ headerShown: false }}
+          component={Bisiklet}
+        />
+        <Stack.Screen
+          name="Pilatestopu"
+          options={{ headerShown: false }}
+          component={Pilatestopu}
+        />
+        <Stack.Screen
+          name="Fitnessbarı"
+          options={{ headerShown: false }}
+          component={Fitnessbarı}
+        />
+        <Stack.Screen
+          name="Girya"
+          options={{ headerShown: false }}
+          component={Girya}
+        />
+        <Stack.Screen
+          name="Steptahtası"
+          options={{ headerShown: false }}
+          component={Steptahtası}
+        />
+        <Stack.Screen
+          name="Mekikaleti"
+          options={{ headerShown: false }}
+          component={Mekikaleti}
+        />
+        <Stack.Screen
+          name="Fitnessplakaları"
+          options={{ headerShown: false }}
+          component={Fitnessplakaları}
+        />
+        <Stack.Screen
+          name="Fitnesssehpası"
+          options={{ headerShown: false }}
+          component={Fitnesssehpası}
+        />
+        <Stack.Screen
+          name="Koşubandı"
+          options={{ headerShown: false }}
+          component={Koşubandı}
+        />
+        
         
       </Stack.Navigator>
     </NavigationContainer>

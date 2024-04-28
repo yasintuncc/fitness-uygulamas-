@@ -55,11 +55,11 @@ export default function LoginScreen() {
     
     <View style={styles.container}>
       <ImageBackground
-      source={require('../assets/g.jpg')}
+      source={require('../assets/a.jpg')}
       style={styles.backgroundImage}
       resizeMode="stretch"
     />
-      <Text style={styles.title}>Hoşgeldiniz</Text>
+      <Text style={styles.title}>Sports is Life</Text>
 
       
       <TextInput
@@ -108,7 +108,7 @@ export default function LoginScreen() {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "rgba(0,50,500,0.3)",
+    backgroundColor: "rgba(0,0,100,0.3)",
     padding: 10,
     width: 190,
     borderRadius: 30,
@@ -123,7 +123,9 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
   },
   forgotPasswordText: {
-    color:"red",
+    color:"white",
+    fontSize: 15,
+    fontWeight:"bold",
   },
   container: {
     flex: 1,
@@ -135,6 +137,7 @@ const styles = StyleSheet.create({
     fontFamily:"font4",
     color:"white",
     fontFamily:"Roboto",
+    fontWeight:"bold",
   },
   input: {
     padding: 15,
