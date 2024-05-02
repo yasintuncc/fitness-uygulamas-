@@ -11,7 +11,7 @@ const Alet_Data = [
         title: "deadlift",
         subtitle: "Bacak Açıklama",
         img: require("../assets/deadliftbar.jpg"),
-        page: "Deadlift",
+        page: "Deadliftt",
       },
       {
         id: "3",

@@ -32,6 +32,7 @@ import Mekikaleti from "./screens/Aletler/Mekikaleti";
 import Fitnessplakaları from "./screens/Aletler/Fitnessplakaları";
 import Fitnesssehpası from "./screens/Aletler/Fitnesssehpası";
 import Koşubandı from "./screens/Aletler/Koşubandı";
+import Deadliftt from "./screens/Aletler/Deadliftt";
 
 
 export default function App() {
@@ -153,9 +154,9 @@ export default function App() {
           component={Dambil}
         />
         <Stack.Screen
-          name="deadlift"
+          name="Deadliftt"
           options={{ headerShown: false }}
-          component={Deadlift}
+          component={Deadliftt}
         />
 
         <Stack.Screen

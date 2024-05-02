@@ -20,7 +20,7 @@ export default function Aletler() {
   const [columns, setColumns] = useState(2);
 
   useEffect(() => {
-    StatusBar.setBackgroundColor("#67bf49");
+    StatusBar.setBackgroundColor("black");
     StatusBar.setBarStyle("light-content");
   }, []);
 
@@ -33,7 +33,7 @@ export default function Aletler() {
       <Image
         source={item.img}
         style={{ width: "100%", height: "100%" }}
-        resizeMode="cover"
+        resizeMode="stretch"
       />
       <View style={styles.subtitleArea}>
         <Text style={styles.subtitle}></Text>
@@ -61,7 +61,7 @@ export default function Aletler() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 22,
+    paddingTop: 10,
     backgroundColor: "#fffaf0",
     alignItems: "center",
     justifyContent: "center",
@@ -82,13 +82,13 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
     flexDirection: "row",
     alignItems: "center",
   },
   subtitle: {
     color: "white",
-    fontSize: 16,
+    fontSize: 12,
     padding: 10,
   },
   nameContainer: {
@@ -98,7 +98,8 @@ const styles = StyleSheet.create({
   },
   name: {
     color: "white",
-    fontSize: 17,
+    fontWeight:'bold',
+    fontSize: 16,
     padding: 10,
     textAlign: "center",
   },
