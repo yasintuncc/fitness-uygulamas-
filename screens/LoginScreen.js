@@ -66,7 +66,8 @@ export default function LoginScreen() {
         style={styles.input}
         autoCorrect={false}
         placeholder="Kullanıcı Adı"
-        placeholderTextColor={"white"}
+        fontWeight="bold"
+        placeholderTextColor={"rgba(	0, 0, 20,0.7)"}
         onChangeText={(text) => setEmail(text)}
         keyboardType="email-address"
         autoCapitalize="none"
@@ -75,7 +76,8 @@ export default function LoginScreen() {
         style={styles.input}
         autoCorrect={false}
         placeholder="Şifre"
-        placeholderTextColor={"white"}
+        fontWeight="bold"
+        placeholderTextColor={"rgba(	0, 0, 20,0.7)"}
         secureTextEntry
         autoCapitalize="none"
         onChangeText={(text) => setPassword(text)}
@@ -96,11 +98,11 @@ export default function LoginScreen() {
       </TouchableOpacity>
 
       <TouchableOpacity
-        activeOpacity={0.8}
+        activeOpacity={0.5}
         style={styles.button}
         onPress={() => navigation.navigate("kayit")}
       >
-        <Text style={styles.buttonText}>kayıt ol</Text>
+        <Text style={styles.buttonText}>Kayıt ol</Text>
       </TouchableOpacity>
     </View>
   );
@@ -108,24 +110,26 @@ export default function LoginScreen() {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "rgba(0,0,100,0.3)",
+    backgroundColor: "rgba(	245, 255, 250,0.7)",
     padding: 10,
-    width: 190,
+    width: 180,
     borderRadius: 30,
-    marginTop: "5%",
-    justifyContent: "space-between",
+    marginTop: "10%",
+    
   },
   buttonText: {
-    color: "white",
+    color: "black",
     margin: "auto",
     fontSize: 20,
     textAlign: "center",
-    fontFamily: "Roboto",
+    fontFamily: "sans-serif-medium",
+    fontWeight:"bold",
   },
   forgotPasswordText: {
-    color:"white",
-    fontSize: 15,
+    color:"blue",
+    fontSize: 18,
     fontWeight:"bold",
+    position:"absolute",
   },
   container: {
     flex: 1,
@@ -144,8 +148,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: 300,
     marginTop: 20,
-    backgroundColor: "rgba(0,0,100,0.3)",
-    color:"white",
+    backgroundColor: "rgba(	245, 255, 250,0.7)",
+    color:"black",
+    fontSize:17,
   },
   
   backgroundImage: {

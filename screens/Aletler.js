@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 10,
-    backgroundColor: "#fffaf0",
+    backgroundColor: "transparent",
     alignItems: "center",
     justifyContent: "center",
     marginTop: 20,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.4)",
+    backgroundColor: "rgba(0, 0, 0, 0.6)",
     flexDirection: "row",
     alignItems: "center",
   },

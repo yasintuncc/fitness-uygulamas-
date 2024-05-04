@@ -39,21 +39,21 @@ export default function RegisterScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Kayıt Olma Ekranı</Text>
+      <Text style={styles.title}>KAYIT OLMAK İÇİN</Text>
 
      
       <TextInput
         style={styles.input}
         autoCorrect={false}
         placeholder="Kullanıcı Adı"
-        placeholderTextColor={"black"}
+        placeholderTextColor={"white"}
         onChangeText={(text) => setEmail(text)}
       />
       <TextInput
         style={styles.input}
         autoCorrect={false}
         placeholder="Soyisim"
-        placeholderTextColor={"black"}
+        placeholderTextColor={"white"}
         onChangeText={(text) => setPassword(text)}
       />
 
@@ -61,7 +61,7 @@ export default function RegisterScreen({ navigation }) {
         style={styles.input}
         autoCorrect={false}
         placeholder="E-Mail"
-        placeholderTextColor={"black"}
+        placeholderTextColor={"white"}
         onChangeText={(text) => setEmail(text)}
         keyboardType="email-address"
         autoCapitalize="none"
@@ -70,7 +70,7 @@ export default function RegisterScreen({ navigation }) {
         style={styles.input}
         autoCorrect={false}
         placeholder="Şifre"
-        placeholderTextColor={"black"}
+        placeholderTextColor={"white"}
         secureTextEntry
         autoCapitalize="none"
         onChangeText={(text) => setPassword(text)}
@@ -80,7 +80,7 @@ export default function RegisterScreen({ navigation }) {
         style={styles.button}
         onPress={handleSignUp}
       >
-        <Text style={styles.buttonText}>Kayıt Ol</Text>
+        <Text style={styles.buttonText}>KAYIT OL</Text>
       </TouchableOpacity>
     </View>
   );
@@ -88,10 +88,10 @@ export default function RegisterScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "darkblue",
+    backgroundColor: "rgba(0,100,100,0.7)",
     padding: 20,
     borderRadius: 19,
-    width: 210,
+    width: 180,
     borderRadius: 50,
     marginTop: "10%",
     justifyContent: "space-between",
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     margin: "auto",
-    fontSize: 16,
+    fontSize: 18,
     textAlign: "center",
     fontFamily: "Roboto",
   },
@@ -115,8 +115,14 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 10,
     width: 300,
-    marginTop: 20,
-    backgroundColor: "rgba(0,0,255,0.2)",
+    marginTop: 15,
+    backgroundColor: "rgba(0,100,100,0.7)",
+    color:"white",
+    fontWeight:"bold",
+    fontSize:15,
   },
+  TextInput:{
+    color:"white",
+  }
   
 });

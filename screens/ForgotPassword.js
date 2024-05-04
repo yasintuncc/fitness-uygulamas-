@@ -32,14 +32,15 @@ export default function ForgotPassword() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Mail Adresinizi giriniz :</Text>
+      <Text style={styles.title}>MAİL ADRESİNİZİ GİRİN </Text>
       <TextInput
         style={styles.input}
         onChangeText={(text) => setEmail(text)}
         value={email}
         keyboardType="email-address"
         autoCapitalize="none"
-        placeholderTextColor={"black"}
+        
+        placeholderTextColor={"white"}
         placeholder="E-Mail"
       />
       <TouchableOpacity
@@ -65,27 +66,31 @@ const styles = StyleSheet.create({
   input: {
     padding: 15,
     borderRadius: 10,
-    width: 300,
+    color:"white",
+    width: 310,
+    fontSize:18,
     marginTop: 10,
-    backgroundColor: "rgba(0,0,255,0.2)",
+    fontWeight:"bold",
+    backgroundColor: "rgba(0,100,100,0.7)",
   },
   title: {
-    alignSelf: "flex-start",
-    marginLeft: 45,
+    alignSelf: "baseline",
+    marginLeft: 49,
     fontSize: 17,
   },
   button: {
-    backgroundColor: "darkblue",
+    backgroundColor: "rgba(0,100,100,0.9)",
     padding: 15,
     borderRadius: 15,
     marginTop: 10,
-    width: 200,
+    width: 190,
     borderRadius: 50,
-    marginTop: "10%",
+    marginTop: "8%",
   },
   buttonText: {
     color: "white",
-    fontSize: 15,
+    fontSize: 17,
+    fontWeight:"bold",
     textAlign: "center",
   },
 });
